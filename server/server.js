@@ -18,12 +18,36 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const allowedOrigins = (process.env.CLIENT_URL || '')
+  .split(',')
+  .map((origin) => origin.trim().replace(/\/$/, ''))
+  .filter(Boolean);
+
+function isAllowedOrigin(origin) {
+  if (!origin) {
+    return true;
+  }
+
+  const cleanOrigin = origin.replace(/\/$/, '');
+  return (
+    allowedOrigins.includes(cleanOrigin) ||
+    /^https:\/\/prodesk-mission-17(-[a-z0-9]+)?-atejasya8-1627s-projects\.vercel\.app$/.test(cleanOrigin) ||
+    cleanOrigin === 'https://prodesk-mission-17.vercel.app'
+  );
+}
 
 connectDB();
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin(origin, callback) {
+      if (isAllowedOrigin(origin)) {
+        callback(null, true);
+        return;
+      }
+
+      callback(new Error(`CORS blocked request from ${origin}`));
+    },
     credentials: true
   })
 );
