@@ -63,17 +63,26 @@ function Register() {
 
           <label>
             Name
-            <input name="name" value={formData.name} onChange={handleChange} required />
+            <span className="input-wrap">
+              <span>T</span>
+              <input name="name" value={formData.name} onChange={handleChange} placeholder="A Tejasya" required />
+            </span>
           </label>
 
           <label>
             Email
-            <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+            <span className="input-wrap">
+              <span>@</span>
+              <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="atejasya8@gmail.com" required />
+            </span>
           </label>
 
           <label>
             Password
-            <input type="password" name="password" value={formData.password} onChange={handleChange} required />
+            <span className="input-wrap">
+              <span>#</span>
+              <input type="password" name="password" value={formData.password} onChange={handleChange} required />
+            </span>
           </label>
 
           <button className="primary-btn" type="submit" disabled={loading}>{loading ? 'Creating...' : 'Create Account'}</button>

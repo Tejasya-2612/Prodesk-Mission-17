@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import Icon from './Icon';
 import ProfileMenu from './ProfileMenu';
 
 function Header({ onCreateTask, onUpgrade }) {
   const navigate = useNavigate();
+  const { user } = useAuth();
   const [query, setQuery] = useState('');
 
   function handleSearch(event) {
@@ -36,7 +38,7 @@ function Header({ onCreateTask, onUpgrade }) {
 
       <header className="dashboard-header" id="dashboard">
         <div>
-          <h2>Welcome back, Tejasya! <span className="wave">Wave</span></h2>
+          <h2>Welcome back, {user?.name?.split(' ')[0] || 'Tejasya'}!</h2>
           <p>Here's what's happening with your projects today.</p>
         </div>
 
