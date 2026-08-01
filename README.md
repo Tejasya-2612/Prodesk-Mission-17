@@ -97,11 +97,10 @@ Keep real secrets only in `.env` files or hosting provider dashboards. The `.env
 4. Copy the connection string into `MONGODB_URI`.
 5. Restart the Render service after saving the variable.
 
-## Demo Instructions
+## Author:
 
-1. Register a new account.
-2. Log in.
-3. Create a project.
-4. Create, update, move, and delete tasks.
-5. Open dashboard, boards, calendar, team, files, reports, and search pages.
-6. Test Stripe checkout only with configured Stripe test keys.
+A TEJASYA
+
+P/IL/26/NOIDA/M1299
+
+
