@@ -8,6 +8,12 @@ Frontend: React 19, Vite, React Router, Axios, Recharts, plain CSS
 
 Backend: Node.js, Express, MongoDB Atlas, Mongoose, JWT, bcryptjs, Stripe, dotenv, cors
 
+## Deployment:
+
+Frontend Link: https://prodesk-mission-17.vercel.app/
+
+Backend Link: https://prodesk-mission-17.onrender.com/
+
 ## Installation
 
 Install frontend and backend dependencies separately.
