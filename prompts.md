@@ -1,39 +1,106 @@
-# AI Assistance Log
+# Prompt 1 – Production Deployment
 
-This project was generated with AI assistance for Sprint 15 Track B.
+Upgrade the existing MERN application for production deployment. Configure the frontend for Vercel and the backend for Render. Ensure all environment variables are securely managed using deployment dashboards instead of local files. Remove hardcoded localhost URLs and replace them with environment variables.
 
-## Main Prompt Summary
+---
 
-The requested app was a brand-new full-stack MERN task management dashboard named **Prodesk IT Mission 15**. The prompt asked for:
+# Prompt 2 – Backend Deployment
 
-- React 19 and Vite frontend
-- Express and MongoDB backend
-- JWT authentication
-- Task CRUD with ownership checks
-- Kanban board
-- Analytics charts using Recharts
-- Stripe Checkout test-mode integration
-- Simple beginner-friendly folder structure
-- README and prompt documentation
+Deploy the Express backend to Render.
 
-## Important Development Notes
+Requirements:
 
-- The previous Sprint 14 deployment links and Figma link were used only as design and functionality references.
-- No previous project code was recovered, copied, decompiled or modified.
-- The code was written with a simple student-friendly style.
-- Axios calls are kept inside service files instead of React components.
-- JWT is stored in localStorage as required.
+- Configure package.json with a production start script.
+- Connect to MongoDB Atlas.
+- Configure environment variables.
+- Enable secure CORS.
+- Handle production errors gracefully.
+- Verify successful deployment.
 
-## Sprint 16 AI Prompt
+---
 
-Endpoint: `POST /api/ai/suggest`
+# Prompt 3 – Frontend Deployment
 
-Prompt:
+Deploy the React Vite frontend to Vercel.
 
-```text
-Rewrite the text into a professional borrowing description.
-Keep it clear, polite, and under 80 words.
-Text: {user text}
-```
+Requirements:
 
-The Gemini API key stays on the server in `GEMINI_API_KEY`.
+- Build successfully using npm run build.
+- Configure VITE_API_URL.
+- Remove localhost references.
+- Connect to deployed backend.
+- Configure SPA routing using vercel.json.
+- Verify deployment.
+
+---
+
+# Prompt 4 – Environment Variables
+
+Create .env.example files without exposing any secrets.
+
+Backend variables:
+
+- PORT
+- MONGODB_URI
+- JWT_SECRET
+- CLIENT_URL
+- CLOUDINARY_NAME
+- CLOUDINARY_API_KEY
+- CLOUDINARY_API_SECRET
+- STRIPE_SECRET_KEY
+- STRIPE_PRICE_ID
+- GEMINI_API_KEY
+
+Frontend variables:
+
+- VITE_API_URL
+
+---
+
+# Prompt 5 – Production Security
+
+Improve production security.
+
+Tasks:
+
+- Secure CORS configuration.
+- Remove exposed secrets.
+- Validate environment variables.
+- Improve API error handling.
+- Protect JWT authentication.
+- Verify MongoDB connection.
+
+---
+
+# Prompt 6 – Lighthouse Optimization
+
+Optimize the application for production.
+
+Tasks:
+
+- Improve loading performance.
+- Reduce unnecessary JavaScript.
+- Compress assets.
+- Improve Accessibility.
+- Fix Lighthouse warnings.
+- Improve SEO metadata.
+
+Target:
+
+- Performance ≥ 90
+- Accessibility ≥ 90
+
+---
+
+# Prompt 7 – Accessibility Improvements
+
+Improve accessibility by:
+
+- Adding labels to every form element.
+- Adding labels to select controls.
+- Improving color contrast.
+- Adding aria-label attributes where necessary.
+- Marking decorative SVG icons using aria-hidden.
+- Preserving the existing UI.
+
+---
